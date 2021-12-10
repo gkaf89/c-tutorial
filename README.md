@@ -23,7 +23,25 @@ In computers memmory:
    +-----------------+
 ```
 
-Structures are ussed to group related values. They are very useful in return multiple results from functions. For instance:
+## Assignment
+
+```c
+A.m = 2;
+A.n = 3;
+A.x = (double*) malloc(A.m*A.n*sizeof(double));
+```
+
+In computers memmory:
+
+```
+   +--------+--------+
+   | m: 2   | n: 3   |
+   +--------+--------+
+   | x: 0x03da8cd6   |
+   +-----------------+
+```
+
+Structures are ussed to group related values both conceptually and in memory. They are very useful in return multiple results from functions. For instance:
 
 ```c
 struct min_and_max
@@ -48,24 +66,6 @@ struct min_and_max find_min_and_max(int* A, int lenght)
 	
 	return s;
 }
-```
-
-## Assignment
-
-```c
-A.m = 2;
-A.n = 3;
-A.x = (double*) malloc(A.m*A.n*sizeof(double));
-```
-
-In computers memmory:
-
-```
-   +--------+--------+
-   | m: 2   | n: 3   |
-   +--------+--------+
-   | x: 0x03da8cd6   |
-   +-----------------+
 ```
 
 ## Assignment shortcut
