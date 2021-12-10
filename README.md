@@ -23,6 +23,33 @@ In computers memmory:
    +-----------------+
 ```
 
+Structures are ussed to group related values. They are very useful in return multiple results from functions. For instance:
+
+```c
+struct min_and_max
+{
+	int min;
+	int max;
+};
+
+struct min_and_max find_min_and_max(int* A, int lenght)
+{
+	struct min_and_max s;
+	
+	s.min = A[0];
+	s.max = A[0];
+	for (int i = 0; i < length; ++i) {
+		if (s.min < A[i]) {
+			s.min = A[i];
+		} else if (s.max > A[i]) {
+			s.max = A[i];
+		}
+	}
+	
+	return s;
+}
+```
+
 ## Assignment
 
 ```c
