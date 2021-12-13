@@ -57,9 +57,9 @@ struct min_and_max find_min_and_max(int* A, int lenght)
 	s.min = A[0];
 	s.max = A[0];
 	for (int i = 1; i < length; ++i) {
-		if (s.min < A[i]) {
+		if (s.min > A[i]) {
 			s.min = A[i];
-		} else if (s.max > A[i]) {
+		} else if (s.max < A[i]) {
 			s.max = A[i];
 		}
 	}
